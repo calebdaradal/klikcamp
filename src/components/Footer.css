@@ -1,0 +1,83 @@
+/* Footer Container - Stretches full width (like the gray area in your image) */
+.footer {
+  background: #333;
+  color: #fff;
+  padding: 40px 0 20px;
+  margin-top: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Footer Component Container - Centered with max-width (like the blue area in your image) */
+.footer-component-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  /* Remove fixed grid-template-columns - now controlled by inline style */
+  gap: 10px;
+  width: 100%; /* Fixed: was 50vh, should be 100% */
+  box-sizing: border-box;
+}
+
+/* Footer Columns - Individual components (like the pink areas in your image) */
+.footer-column {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-section h3 {
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section li {
+  margin-bottom: 10px;
+}
+
+.footer-section a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  border-top: 1px solid #555;
+  margin-top: 30px;
+  padding-top: 20px;
+  text-align: center;
+  color: #ccc;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .footer-component-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+  
+  .footer {
+    padding: 30px 0 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-component-container {
+    padding: 0 15px;
+    gap: 25px;
+  }
+  
+  .footer-section h3 {
+    font-size: 1.1rem;
+  }
+}
